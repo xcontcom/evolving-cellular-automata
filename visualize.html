@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fitness Heatmap</title>
+    <style>
+        canvas { border: 1px solid black; background: black; margin: 10px; }
+        body { background: #333; margin: 0; padding: 10px; }
+        h3 { color: white; text-align: center; }
+    </style>
+</head>
+<body>
+    <h3>Fitness Heatmap</h3>
+    <canvas id="heatmap" width="800" height="600"></canvas>
+    <button onclick="saveHeatmap()">Save Heatmap as PNG</button>
+    <script>
+        async function loadData(file) {
+            try {
+                const response = await fetch(`storage/${file}`);
+                if (!response.ok) {
+                    throw new Error(`Failed to fetch ${file}: ${response.statusText}`);
+                }
+                return await response.json();
+            } catch (error) {
+                console.error(`Error loading ${file}:`, error);
+                alert(`Failed to load ${file}. Run the simulation first.`);
+                return null;
+            }
+        }
+
+        function drawHeatmap(heatmaps, maxFitness, fitnessMode) {
+			maxFitness=800000;
+            const canvas = document.getElementById('heatmap');
+            const ctx = canvas.getContext('2d');
+            const width = canvas.width; // 800
+            const height = canvas.height; // 600
+            const epochCount = heatmaps.length;
+			console.log('epochCount='+epochCount+', maxFitness='+maxFitness+', fitnessMode='+fitnessMode);
+			
+            ctx.fillStyle = 'black';
+            ctx.fillRect(0, 0, width, height);
+
+            if (epochCount === 0) return;
+
+            const cellWidth = width / (maxFitness + 1);
+            const cellHeight = height / epochCount;
+
+            let maxFrequency = 0;
+            const histograms = heatmaps.map(fitnesses => {
+                const arr = Array(maxFitness + 1).fill(0);
+                fitnesses.forEach(f => {
+                    if (f >= 0 && f <= maxFitness) {
+                        arr[f]++;
+                        maxFrequency = Math.max(maxFrequency, arr[f]);
+                    }
+                });
+                return arr;
+            });
+
+
+/*
+            for (let e = 0; e < epochCount; e++) {
+                const histogram = histograms[e];
+                for (let f = 0; f <= maxFitness; f++) {
+                    const count = histogram[f];
+                    if (count > 0) {
+                        const normalized = fitnessMode === 'totalMatches' ?
+                            Math.log1p(count) / Math.log1p(maxFrequency) :
+                            count / maxFrequency;
+                        const intensity = 255;//Math.min(255, Math.floor(normalized * 255));
+                        ctx.fillStyle = `rgb(${intensity}, ${intensity}, ${intensity})`;
+                        const x = f * cellWidth;
+                        //const y = (epochCount - 1 - e) * cellHeight; //for Australian brothers
+						const y = e * cellHeight;
+                        //ctx.fillRect(x, y, cellWidth, cellHeight);
+						ctx.fillRect(x, y, 1, 1);
+                    }
+                }
+            }
+*/
+
+            for (let e = 0; e < epochCount; e++) {
+                const histogram = histograms[e];
+                for (let f = 0; f <= maxFitness; f++) {
+                    const count = histogram[f];
+                    if (count > 0) {
+                        ctx.fillStyle = 'rgb(255,255,255)';
+                        const x = f * cellWidth;
+						const y = e * cellHeight;
+						ctx.fillRect(x, y, 1, 1);
+                    }
+                }
+            }	
+			
+			
+        }
+
+        function saveHeatmap() {
+            const canvas = document.getElementById('heatmap');
+            const link = document.createElement('a');
+            link.download = 'heatmap.png';
+            link.href = canvas.toDataURL('image/png');
+            link.click();
+        }
+
+        Promise.all([
+            loadData('heatmap.json'),
+            loadData('config.json')
+        ]).then(([heatmaps, config]) => {
+            if (heatmaps && config) {
+                drawHeatmap(heatmaps, config.maxFitness, config.fitnessMode);
+            }
+        }).catch(error => {
+            console.error('Error loading data:', error);
+        });
+    </script>
+</body>
+</html>

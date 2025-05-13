@@ -1,0 +1,41 @@
+body{
+	color: #333;
+	background-color: #e0e0e0;
+}
+.topbuttons{
+	margin:3px;
+	padding:3px;
+	background-color: #ffffff;
+}
+.topbuttons input{
+	margin:3px;
+	padding:3px;
+	background-color: #ffffff;
+}
+.footerbuttons{
+	margin:3px;
+	padding:3px;
+	background-color: #ffffff;
+}
+.footerbuttons input{
+	margin:3px;
+	padding:3px;
+	background-color: #ffffff;
+}
+ .canv0, .canv1, .canv2, .canv3, .canv4{
+	display:inline-block;
+	background-color: #ffffff;
+	margin:3px;
+}
+#mutatepercent, #mutategen{
+	width:20px;
+}
+#canv{
+	margin:3px;
+	padding:3px;
+}
+#console-log0, #console-log1, #console-log2, #console-log3{
+	margin:3px;
+	padding:3px;
+	background-color: #ffffff;
+}

@@ -1,0 +1,30 @@
+<!DOCTYPE html> 
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>cellular</title>
+<link rel="stylesheet" href="style.css" type="text/css" />
+<script type="text/javascript" src="testpop_from_file.js"></script>
+</head>
+<body>
+<div class="topbuttons">
+	<input type="button" value="Start" onClick="start();" /><input type="button" value="Stop" onClick="stop();" /><input type="button" value="One" onClick="onestep();" /><input type="button" value="Clear" onClick="clearc();" /><input type="button" value="Count 5000" onClick="count100(5000);" /><input type="button" value="Count 1000" onClick="count100(1000);" /><input type="button" value="Count 500" onClick="count100(500);" /><input type="button" value="Count 200" onClick="count100(200);" /><input type="button" value="Count 100" onClick="count100(100);" />
+</div>
+<div id="canv"></div>
+<div class="footerbuttons">
+	<input type="button" value="Select" onClick="selectc();" />
+	<div id="mp1">Mutations <input type="text" id="mutatepercent" value="10" /> %</div>
+	<div id="mp2">Gens <input type="text" id="mutategen" value="4" />/512</div>
+	<input type="button" value="Start evolution" onClick="evolute();" /><input type="button" value="Recreate" onClick="recreate();" />
+</div>
+<div id="console-log0"></div>
+<div id="console-log1"></div>
+<div id="console-log2"></div>
+<div id="console-log3"></div>
+<div>Genotype:</div>
+<div id="canv2"></div>
+<script>
+	init();		
+</script>
+</body>
+</html>
