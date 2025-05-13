@@ -17,12 +17,15 @@ Built with Node.js for relentless computation and JavaScript/HTML5 for vivid vis
 ## Project Structure
 ```
 cellular-automata-evolution/
+├── docs/
+│   ├── article.md       # Translated 2019 article with experiments and visuals
+│   └── legacy.md        # Archived experimental code from draw_node.js
 ├── draw_node.js          # Server-side CA simulation and genetic algorithm
 ├── testpop_from_file.html # Client-side visualization and manual selection UI
 ├── testpop_from_file.js  # Client-side logic for CA rendering and evolution
 ├── visualize.html        # Fitness heatmap visualizer
 ├── repl.js              # REPL interface for server-side control
-├── storage/             # JSON storage for population, fitness, and heatmaps
+├── storage/             # JSON storage for population, fitness, and heatmaps. The files in this folder contain one of the examples.
 │   ├── population.json
 │   ├── fitness.json
 │   ├── heatmap.json
