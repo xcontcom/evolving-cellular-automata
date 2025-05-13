@@ -25,7 +25,7 @@ cellular-automata-evolution/
 ├── testpop_from_file.js  # Client-side logic for CA rendering and evolution
 ├── visualize.html        # Fitness heatmap visualizer
 ├── repl.js              # REPL interface for server-side control
-├── storage/             # JSON storage for population, fitness, and heatmaps. The files in this folder contain one of the examples.
+├── storage/             # JSON storage for population, fitness, and heatmaps. As an example.
 │   ├── population.json
 │   ├── fitness.json
 │   ├── heatmap.json
