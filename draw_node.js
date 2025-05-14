@@ -23,15 +23,15 @@ let mutation = 20;
 let mutategen = 32;
 
 /** @constant {number} newPopulationDensity - Initial live cell probability for rules */
-const newPopulationDensity = 0.45;
+const newPopulationDensity = 0.35;
 
 // Configuration for fitness evaluation
 /** @constant {number} patchSize - Size of patches for symmetry checks */
-const patchSize = 7;
+const patchSize = 3;
 /** @constant {number} minDensity - Minimum live cell density for valid grids */
-const minDensity = 0.4;
+const minDensity = 0.3;
 /** @constant {number} maxDensity - Maximum live cell density for valid grids */
-const maxDensity = 0.5;
+const maxDensity = 0.4;
 
 // --------------------- File Storage Functions ---------------------
 
@@ -599,8 +599,12 @@ function testevolute() {
 /**
  * Prints all population rules to console (for debugging).
  */
-function t() {
-	for (let n = 0; n < PopulationSize; n++) console.log("population[" + n + "]=[" + population[n].join(',') + "];");
+function t(n) {
+	if(!n){
+		for (let n = 0; n < PopulationSize; n++) console.log("population[" + n + "]=[" + population[n].join(',') + "];");
+	}else{
+		console.log("population[" + n + "]=[" + population[n].join(',') + "];");
+	}
 }
 
 /**
@@ -662,4 +666,4 @@ function printBestIndividual() {
 init();
 
 // Export functions for REPL
-module.exports = { evil, recreate, resize, mutate, restoreBestPopulation, printBestIndividual };
+module.exports = { evil, recreate, resize, mutate, restoreBestPopulation, printBestIndividual, t };
