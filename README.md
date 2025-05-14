@@ -1,5 +1,7 @@
 # Cellular Automata Evolution Simulator
 
+![CA Demo](screenshots/demo.gif)
+
 ## Overview
 Imagine a search space of 2^512 ≈ 1.34 × 10^154 possible cellular automata (CA) rules—more than the 10^80 atoms in the observable universe. If you checked one rule per second since the Big Bang, you’d have explored just 4.35 × 10^17 by now—a cosmic needle in an infinite haystack. The **Cellular Automata Evolution Simulator** wields genetic algorithms to conquer this vast frontier, evolving CA rules to uncover behaviors no one has ever seen. This is not just a tool; it’s a portal to the uncharted, transforming the chaotic static of raw CA into patterns that pulse with emergent complexity.
 
