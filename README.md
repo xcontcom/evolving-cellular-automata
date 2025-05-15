@@ -47,7 +47,7 @@ cellular-automata-evolution/
 ### Setup
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/cellular-automata-evolution.git
+   git clone https://github.com/xcontcom/cellular-automata-evolution.git
    cd cellular-automata-evolution
    ```
 2. Install dependencies:
