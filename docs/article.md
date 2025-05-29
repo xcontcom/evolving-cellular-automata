@@ -260,7 +260,7 @@ After 3569 epochs:
 
 Solutions at 500, 1000, and 3569 epochs:
 
-![Pattern evolution](images/17.png)
+![Pattern evolution](images/17_3.png)
 
 Gene pool at 3569 epochs:
 
@@ -268,7 +268,7 @@ Gene pool at 3569 epochs:
 
 Dynamic behavior:
 
-![Dynamic pattern automaton](images/19.png)
+![Dynamic pattern automaton](images/19.gif)
 
 A single cell evolving into an oscillator:
 
