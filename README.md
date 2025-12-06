@@ -1,6 +1,6 @@
 # Cellular Automata Evolution Simulator
 
-## [Full article](https://github.com/xcontcom/evolving-cellular-automata/blob/main/docs/article.md)
+## [Full article](https://xcontcom.github.io/evolving-cellular-automata/docs/article.html)
 
 ![CA Demo](screenshots/demo.gif)
 
