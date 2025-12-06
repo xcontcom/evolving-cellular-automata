@@ -12,11 +12,11 @@ This article is a translation and adaptation of my 2019 piece, originally publis
 
 The simplest form of cellular automata is the one-dimensional variant. (While zero-dimensional oscillators exist, we’ll set them aside for now.) In a one-dimensional cellular automaton, we start with a single array representing the initial state, where each cell holds a binary value (0 or 1). The next state of each cell depends on its current state and those of its two immediate neighbors, determined by a predefined rule.
 
-With three cells (the cell itself and its two neighbors), there are \(2^3 = 8\) possible configurations:
+With three cells (the cell itself and its two neighbors), there are 2^3 = 8 possible configurations:
 
 ![Illustration of 8 neighbor configurations](images/1.png)
 
-For each configuration, we define the cell’s next state (0 or 1), forming an 8-bit rule, known as the Wolfram code. This results in \(2^8 = 256\) possible one-dimensional cellular automata.
+For each configuration, we define the cell’s next state (0 or 1), forming an 8-bit rule, known as the Wolfram code. This results in 2^8 = 256 possible one-dimensional cellular automata.
 
 ![Example of an 8-bit rule](images/2.png)
 
@@ -32,7 +32,7 @@ For consistency, we order the neighbors as follows:
 
 ![Neighbor ordering](images/5.png)
 
-With a cell and its eight neighbors, there are $\(2^9 = 512\)$ possible configurations, and the rules are encoded as a 512-bit string, yielding $\(2^{512} \approx 1.34 \times 10^{154}\)$ possible two-dimensional automata—a number far exceeding the estimated atoms in the observable universe $(\(\sim 10^{80}\))$.
+With a cell and its eight neighbors, there are 2<sup>9</sup> = 512 possible configurations, and the rules are encoded as a 512-bit string. This yields 2<sup>512</sup> ≈ 1.34 × 10<sup>154</sup> possible two-dimensional automata—a number far exceeding the estimated ~10<sup>80</sup> atoms in the observable universe.
 
 ![512-bit rule representation](images/6.png)
 
