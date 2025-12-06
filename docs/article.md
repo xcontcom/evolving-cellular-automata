@@ -1,5 +1,7 @@
 # Evolving Cellular Automata
 
+[Repository](https://github.com/xcontcom/evolving-cellular-automata)
+
 ## Introduction
 
 Hello, curious minds! Let’s explore the fascinating intersection of cellular automata and genetic algorithms to uncover emergent patterns and behaviors.
@@ -485,3 +487,5 @@ Results with 5% and 25% mutations:
 Using genetic algorithms to evolve cellular automata reveals a vast landscape of patterns and behaviors. From static grids to dynamic oscillators and complex shapes like “habr,” the interplay of selection, crossover, and mutation uncovers solutions that would be impossible to find manually. Experimenting with mutation rates and crossover methods highlights the robustness and flexibility of this approach, offering endless possibilities for discovery.
 
 Try running these experiments yourself to find new patterns—each run is a new adventure!
+
+[Repository](https://github.com/xcontcom/evolving-cellular-automata)
