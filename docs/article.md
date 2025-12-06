@@ -32,7 +32,7 @@ For consistency, we order the neighbors as follows:
 
 ![Neighbor ordering](images/5.png)
 
-With a cell and its eight neighbors, there are 2<sup>9</sup> = 512 possible configurations, and the rules are encoded as a 512-bit string. This yields 2<sup>512</sup> ≈ 1.34 × 10<sup>154</sup> possible two-dimensional automata—a number far exceeding the estimated ~10<sup>80</sup> atoms in the observable universe.
+With a cell and its eight neighbors, there are 2<sup>9</sup> = 512 possible configurations, and the rules are encoded as a 512-bit string. This yields 2<sup>512</sup> ≈ 1.34 × 10<sup>154</sup> possible two-dimensional automata — a number far exceeding the estimated ~10<sup>80</sup> atoms in the observable universe.
 
 ![512-bit rule representation](images/6.png)
 
