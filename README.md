@@ -41,6 +41,8 @@ cellular-automata-evolution/
 └── README.md            # Project documentation
 ```
 
+[Repository](https://github.com/xcontcom/evolving-cellular-automata)
+
 ## Installation
 ### Prerequisites
 - **Node.js** (v14 or higher)
