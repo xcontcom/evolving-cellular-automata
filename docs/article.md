@@ -495,7 +495,7 @@ That's all for natural selection. For artificial selection, we'll use second-ord
 
 ---
 
-# Natural selection
+# Artificial selection
 
 ---
 
